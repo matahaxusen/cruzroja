@@ -50,7 +50,7 @@ formulario_json = {
 class OpenAIObject:
 
     def __init__(self, engine):
-        openai.api_key = "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"
+        openai.api_key = env.GETENV('openaikey')
         self.engine = engine
         self.conversations = []
         self.logs = []
