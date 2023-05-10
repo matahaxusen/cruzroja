@@ -1,0 +1,147 @@
+.my-card {
+    height: 100%;
+    border-radius: 20px !important;
+    background: #e0e0e0;
+    box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+  }
+  
+  .my-card .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .my-card .card-title {
+    margin-bottom: 10px;
+    color: #C60000;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .my-card .card-text {
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+  
+  .card-body .btn {
+    color: white;
+    font-weight: bold;
+    width: 3.8rem;
+    height: 3.8rem;
+    padding-top: 0.7rem;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .card-body .btn-success {
+    background-color: #2ECC71;
+    border-color: #2ECC71;
+  }
+  
+  .card-body .btn-danger {
+    background-color: #C60000;
+    border-color: #C60000;
+
+  }
+  
+  .card-body .btn.recording {
+    box-shadow: 5px 5px 10px #bfbfbf, -5px -5px 10px #dfdfdf;
+  }
+  
+  .card-body .btn span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    transition: box-shadow 0.3s ease-in-out;
+  }
+
+  .custom-btn {
+    font-family: inherit;
+    font-size: 20px;
+    background: linear-gradient(to right, #ffb6c1, #d46e60);
+    color: white;
+    padding: 0.7em 1em;
+    padding-left: 0.9em;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.2s;
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+    border: 2px solid #ffb6c1;
+  }
+  
+  .custom-btn span {
+    display: block;
+    margin-left: 0.3em;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .custom-btn svg {
+    display: block;
+    transform-origin: center center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .custom-btn:hover .svg-wrapper {
+    animation: fly-1 0.6s ease-in-out infinite alternate;
+  }
+  
+  .custom-btn:hover svg {
+    transform: translateX(1.2em) rotate(45deg) scale(1.1);
+  }
+  
+  .custom-btn:hover span {
+    transform: translateX(5em);
+  }
+  
+  .custom-btn:active {
+    transform: scale(0.95);
+  }
+  
+  @keyframes fly-1 {
+    from {
+      transform: translateY(0.1em);
+    }
+  
+    to {
+      transform: translateY(-0.1em);
+    }
+  }
+
+  .warning-text {
+    color: red;
+    font-size: 14px;
+    margin-top: 8px;
+  }
+
+  .preloader {
+    display: inline-block;
+    position: relative;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .spinner {
+    box-sizing: border-box;
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-top-color: #333;
+    border-radius: 50%;
+    animation: spinner 0.6s linear infinite;
+  }
+  
+  @keyframes spinner {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  

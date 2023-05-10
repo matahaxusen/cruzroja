@@ -1,0 +1,60 @@
+#checkbox {
+  display: none;
+}
+
+.switch {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  z-index: 1;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-size: 0.9em;
+  font-weight: 700;
+  color: #ffffff;
+  border: 2px solid #f0bac2;
+  box-shadow: 0px 0px 3px #020202 inset;
+  background: linear-gradient(to bottom, #ffb6c1, #d46e60);
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3), 0px 0px 3px rgba(0, 0, 0, 0.3) inset;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.svg {
+  position: relative;
+  width: 30%;
+  height: 30%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.svg path {
+  fill: #ffffff;
+}
+
+#checkbox:checked + .switch .svg {
+  filter: drop-shadow(0px 0px 3px #ff949d);
+}
+
+#checkbox:checked + .switch .svg path {
+  fill: #d92027;
+}
+
+#checkbox:checked + .switch {
+  box-shadow: 0px 0px 1px #ff949d inset,
+      0px 0px 2px #ff949d inset,
+      0px 0px 10px #ff949d inset,
+      0px 0px 40px #ff949d,
+      0px 0px 100px #ff949d,
+      0px 0px 5px #ff949d;
+  border: 2px solid #ffffff;
+  background: linear-gradient(to bottom, #d92027, #ff7f7f, #ffb6c1);
+  color: #ffffff;
+}

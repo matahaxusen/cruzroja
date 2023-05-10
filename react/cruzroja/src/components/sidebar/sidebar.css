@@ -1,0 +1,167 @@
+@import 'material-symbols';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #ededed;
+}
+
+button {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 260px;
+  height: 100%;
+  background: #ffffff;
+  transition: width 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  height: 72px;
+  padding: 0 1.25rem 0 0;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.sidebar .sidebar-header button {
+  width: 64px;
+}
+
+.sidebar-logo {
+  height: 20px;
+}
+
+.sidebar button {
+  position: relative;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+  padding: 0 25px;
+  color: #1a1a1a;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 999; /* Aumenta el z-index */
+}
+
+.sidebar button span:nth-child(2) {
+  flex: 1 1 auto;
+}
+
+.sidebar button.active {
+  background: linear-gradient(135deg, #ff4b4b 0%, #ff7e7e 100%);
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+  }
+  .sidebar-closed {
+    max-width: 70px; /* El ancho del sidebar cuando está cerrado */
+  
+  }
+}
+
+.sub-nav button.active::before {
+  background: #f9f9f9;
+}
+
+.sub-nav {
+  overflow: hidden;
+  /* height: 0; */
+  transition: 0.5s;
+}
+
+/* .sub-nav.open {
+  height: 200px;
+} */
+
+.sub-nav button {
+  padding-left: 64px;
+}
+
+.sub-nav button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 36px;
+  translate: 0 -50%;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #1a1a1a;
+}
+
+.material-symbols-outlined {
+  font-size: 22px;
+}
+
+.sidebar-closed {
+  max-width: 70px; /* El ancho del sidebar cuando está cerrado */
+
+}
+
+.menu-button{
+  display: block;
+}
+
+.sidebar-closed .sidebar-header span:not(.material-symbols-outlined),
+.sidebar-closed button span:nth-child(2),
+.sidebar-closed button .dropdown-arrow {
+  display: none;
+}
+
+.sidebar .sidebar-header button {
+  width: 64px;
+  z-index: 2; /* Añade esta línea */
+}
+
+.sidebar .sidebar-header .menu-button {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-icon {
+  margin-left: 8px;
+}
+
+.menu-button-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.cr-logo {
+  max-height: 1.5rem;
+}
+
+.sidebar a {
+  text-decoration: none;
+}
